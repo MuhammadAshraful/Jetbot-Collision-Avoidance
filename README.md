@@ -1,18 +1,16 @@
 # 🤖 JetBot Collision Avoidance using Deep Learning (AlexNet)
 
-This project implements **real-time obstacle avoidance** on the [JetBot](https://github.com/NVIDIA-AI-IOT/jetbot) platform using a **camera feed and deep learning classification model**. The robot detects whether the path is **blocked or free**, and navigates accordingly.
-
-![Demo](media/result_demo.gif)
+This project implements **real-time obstacle avoidance** on the [JetBot](https://github.com/NVIDIA-AI-IOT/jetbot) platform using a **camera feed and deep learning classification model**. The robot detects whether the path is **blocked or free**, and navigates accordingly. Click [here](https://youtu.be/xOFaC9Rw5iY) to check the final outcome
 
 ---
 
-## 🚀 Project Goal
+##  Project Goal
 
 To make a small NVIDIA JetBot **autonomously avoid obstacles** by analyzing the camera feed in real time using a lightweight convolutional neural network (AlexNet or ResNet18).
 
 ---
 
-## 🎯 Key Features
+##  Features Involved
 
 - 🔍 **Real-time camera processing** via GStreamer + OpenCV
 - 🧠 **Deep learning inference** using PyTorch + GPU (fp16)
@@ -22,7 +20,7 @@ To make a small NVIDIA JetBot **autonomously avoid obstacles** by analyzing the 
 
 ---
 
-## 📦 Hardware and Software Used
+##  Hardware and Software Used
 
 | Component              | Details                         |
 |------------------------|----------------------------------|
@@ -37,7 +35,7 @@ To make a small NVIDIA JetBot **autonomously avoid obstacles** by analyzing the 
 
 ---
 
-## 🧠 Model Details
+##  Model Details
 
 The model is trained to classify camera images into two categories:
 - **Blocked** – if there’s an obstacle ahead
@@ -45,7 +43,6 @@ The model is trained to classify camera images into two categories:
 
 Models used:
 - `AlexNet` (Modified final FC layer to output 2 classes)
-- Optionally `ResNet18` for better accuracy
 
 
 
