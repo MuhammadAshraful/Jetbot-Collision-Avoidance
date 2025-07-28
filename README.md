@@ -86,6 +86,10 @@ The dataset was later split into **training (80%)** and **validation (20%)** set
 
 Models used:
 - `AlexNet` (Modified final FC layer to output 2 classes)
+---
+
+📚 For additional guidance, setup details, or troubleshooting, please refer to the official [NVIDIA JetBot GitHub repository](https://github.com/NVIDIA-AI-IOT/jetbot). And for example notebooks for data collection, training and executing the model please refer to [NVIDIA's official collision_avoidance folder](https://github.com/NVIDIA-AI-IOT/jetbot/tree/master/notebooks/collision_avoidance)
+
 
 
 
