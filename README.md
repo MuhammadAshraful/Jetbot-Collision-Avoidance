@@ -41,6 +41,48 @@ The model is trained to classify camera images into two categories:
 - **Blocked** – if there’s an obstacle ahead
 - **Free** – if the path is clear
 
+
+---
+
+## 📸 Data Collection
+
+To train the collision avoidance model, we manually collected data using the JetBot's camera in various indoor environments. The data consists of labeled image frames representing two classes:
+
+* **Blocked (label `0`)** – when an obstacle (e.g., wall, chair, or person) is directly in front of the robot.
+* **Free (label `1`)** – when the path ahead is clear and the robot can safely move forward.
+
+### How the Data Was Collected:
+
+* **Environment**: Living room floor, narrow hallways, desk areas.
+* **Lighting Conditions**: Varied — natural daylight, indoor lights, and low-light situations.
+* **Recording Tool**: A custom Jupyter notebook using the JetBot camera feed, saving images with timestamps and labels.
+* **Labeling Method**: While monitoring the live camera feed, we manually pressed buttons to classify each frame as “blocked” or “free”. Each image was saved with a label into separate folders:
+    * `dataset/blocked/`
+    * `dataset/free/`
+
+### Dataset Summary:
+
+| Class     | Samples    |
+| --------- | ---------- |
+| Blocked   | \~140      |
+| Free      | \~140      |
+| **Total** | **\~280** |
+
+> 🔍 Note: Balanced dataset is crucial to prevent model bias toward any class.
+
+### Preprocessing:
+
+* Images were resized to **224×224** (matching input of AlexNet).
+* Normalized using ImageNet stats:
+
+  * Mean: `[0.485, 0.456, 0.406]`
+  * Std: `[0.229, 0.224, 0.225]`
+
+The dataset was later split into **training (80%)** and **validation (20%)** sets for model training.
+
+---
+  
+
 Models used:
 - `AlexNet` (Modified final FC layer to output 2 classes)
 
