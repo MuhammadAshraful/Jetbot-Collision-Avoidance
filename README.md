@@ -79,7 +79,9 @@ To train the collision avoidance model, we manually collected data using the Jet
   * Std: `[0.229, 0.224, 0.225]`
 
 The dataset was later split into **training (80%)** and **validation (20%)** sets for model training.
+The dataset used for training the collision avoidance model is publicly available in this repository:
 
+📁 Path: sample_data/dataset.zip
 ---
   
 
